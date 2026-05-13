@@ -257,3 +257,40 @@ OPENAI_API_KEY=your_api_key_here
 # Step 7 — Run Project
 
 python app.py
+
+# Prompt Used for AI Analysis
+
+Analyze the following resume.
+Return response ONLY in JSON format.
+Required JSON structure:
+{
+ "score": number,
+ "summary": "string",
+ "strengths": ["point1", "point2"],
+ "weaknesses": ["point1", "point2"],
+ "missing_areas": ["point1", "point2"],
+ "suggestions": ["point1", "point2"]
+}
+
+ # Assumptions Made
+• Users upload only PDF resumes.
+• Resume text is readable and extractable.
+• Internet connection is available for OpenAI API calls.
+• The AI model returns valid JSON responses.
+
+# Challenges Faced
+• AI occasionally returned invalid JSON.
+• Different resume formats affected parsing quality.
+• Handling long resumes required prompt optimization.
+• Maintaining consistent scoring output.
+
+# Future Improvements
+• Job description matching and ATS score
+• Section-wise scoring
+• Keyword highlighting
+• Download analysis as PDF
+• DOCX support
+• Improved UI/UX
+
+# Conclusion
+The AI Resume Analyzer successfully demonstrates an end-to-end AI-powered web application using Flask and OpenAI integration. The solution focuses on functionality, clean architecture, structured AI output, and practical implementation within a short timeline.
