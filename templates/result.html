@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Resume Analysis</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>Resume Analysis Result</h1>
+
+    <h2>Overall Score: {{ result.score }}/100</h2>
+
+    <h3>Profile Summary</h3>
+    <p>{{ result.summary }}</p>
+
+    <h3>Strengths</h3>
+    <ul>
+        {% for item in result.strengths %}
+        <li>{{ item }}</li>
+        {% endfor %}
+    </ul>
+
+    <h3>Weaknesses</h3>
+    <ul>
+        {% for item in result.weaknesses %}
+        <li>{{ item }}</li>
+        {% endfor %}
+    </ul>
+
+    <h3>Missing Areas</h3>
+    <ul>
+        {% for item in result.missing_areas %}
+        <li>{{ item }}</li>
+        {% endfor %}
+    </ul>
+
+    <h3>Suggestions</h3>
+    <ul>
+        {% for item in result.suggestions %}
+        <li>{{ item }}</li>
+        {% endfor %}
+    </ul>
+
+</div>
+
+</body>
+</html>
