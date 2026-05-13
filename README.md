@@ -255,3 +255,5 @@ if __name__ == "__main__":
 OPENAI_API_KEY=your_api_key_here
 
 # Step 7 — Run Project
+
+python app.py
